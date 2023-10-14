@@ -1,13 +1,14 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-import PropTypes from "prop-types";
+import CounterPage from "./src/pages/CounterPage";
 
 const App = () => {
   return (
-    <View style={styles.mainContainer}>
-      <Text style={styles.textContainer}>Hello World</Text>
-      <Text style={styles.newContainer}>This is Redwan</Text>
-    </View>
+    // <View style={styles.mainContainer}>
+    //   <Text style={styles.textContainer}>Hello World</Text>
+    //   <Text style={styles.newContainer}>This is Redwan</Text>
+    // </View>
+    <CounterPage/>
   );
 };
 
