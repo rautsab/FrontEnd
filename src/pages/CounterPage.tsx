@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, View, Text, StyleSheet } from "react-native";
 
-const CounterPage = () =>{
+const CounterPage = (props: any) =>{
     const [counter, setCounter] = useState(0); //React Hook
     const increaseHandler = () =>{
         setCounter(counter + 1);
@@ -12,6 +12,10 @@ const CounterPage = () =>{
         setCounter(counter - 1);
         console.log("Current Value : " + counter);
 
+    }
+
+    const navHandler = () =>{
+        props.navigation.navigate("Login");
     }
 
     const setReset = () => {
@@ -27,8 +31,10 @@ const CounterPage = () =>{
             <View style={style.buttonContainer}>
                 <Button title="Increase" onPress={increaseHandler}></Button>
                 <Button title="Decrease" onPress={decreaseHandler}></Button>
-
                 <Button title="Reset" onPress={setReset}></Button>
+            </View>
+            <View>
+                <Button title="Login" onPress={navHandler}/>
             </View>
         </View>
     )
